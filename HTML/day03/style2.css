@@ -1,0 +1,23 @@
+
+
+
+/* html,body{
+    height : 100px;
+} */
+
+
+body {
+    display: flex;
+}
+
+
+div{
+    width:200px;
+    height:200px;
+    background-color: skyblue;
+
+}
+
+#second {
+    background-color: white;
+}

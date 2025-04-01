@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1+h2 {color: red;} */
+        /* h1~h2 {color: blue;} */
+        /* h1:hover {color: red;} */
+        /* h1:active {color: blue;} */
+        input[type=checkbox]:checked + div {
+            height: 0px;
+        }
+        div {
+            overflow: hidden;
+            width: 650px;
+            height: 300px;
+            -ms-transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Header12345</h1>
+    <h2>Header12345</h2>
+    <h2>Header12345</h2>
+    <h2>Header12345</h2>
+    <h2>Header12345</h2> -->
+    <!-- <input type="text">
+    <input type="text" disabled="disabled"> -->
+    <h1>상태 선택자 테스트</h1>
+    <input type="checkbox" name="check" id="">
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit eius cupiditate suscipit animi eum rem aut. Itaque excepturi culpa odit aspernatur nemo porro consequuntur eaque hic. Veritatis sed nisi officiis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit eius cupiditate suscipit animi eum rem aut. Itaque excepturi culpa odit aspernatur nemo porro consequuntur eaque hic. Veritatis sed nisi officiis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit eius cupiditate suscipit animi eum rem aut. Itaque excepturi culpa odit aspernatur nemo porro consequuntur eaque hic. Veritatis sed nisi officiis.</p>
+    </div>
+</body>
+</html>

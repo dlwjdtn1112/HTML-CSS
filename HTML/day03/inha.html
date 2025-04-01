@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>인하대학교 포털</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Apple SD Gothic Neo', sans-serif;
+      background-color: #f7f9fc;
+    }
+
+    /* 로그인 화면 */
+    #login-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #003478, #0050a0);
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      width: 320px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #003478;
+    }
+
+    .slogan {
+      margin-bottom: 25px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    #login-form input {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    #login-form input:focus {
+      border-color: #0050a0;
+      outline: none;
+    }
+
+    #login-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0050a0;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    #login-form button:hover {
+      background-color: #003f80;
+    }
+
+    .login-options {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .login-options a {
+      color: #0050a0;
+      text-decoration: none;
+    }
+
+    .login-options a:hover {
+      text-decoration: underline;
+    }
+
+    /* 포털 화면 */
+    #portal-page {
+      display: none;
+    }
+
+    header {
+      background-color: #003478;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0050a0;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      border-bottom: 2px solid #0050a0;
+      padding-bottom: 10px;
+      color: #003478;
+    }
+
+    .notice {
+      margin-top: 20px;
+    }
+
+    .notice ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .notice li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .mascot-box {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .mascot {
+      text-align: center;
+    }
+
+    .mascot img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003478;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 로그인 화면 -->
+  <div id="login-page">
+    <div class="login-container">
+      <h1>INHA UNIVERSITY</h1>
+      <p class="slogan">학문과 진리를 향한 첫걸음</p>
+      <form id="login-form" onsubmit="login(event)">
+        <input type="text" placeholder="아이디" required />
+        <input type="password" placeholder="비밀번호" required />
+        <button type="submit">로그인</button>
+        <div class="login-options">
+          <a href="#">아이디 찾기</a> | <a href="#">비밀번호 재설정</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 포털 메인 화면 -->
+  <div id="portal-page">
+    <header>
+      <h1>INHA University Portal</h1>
+    </header>
+
+    <nav>
+      <a href="#">학사</a>
+      <a href="#">수강신청</a>
+      <a href="#">성적조회</a>
+      <a href="#">공지사항</a>
+      <a href="#" onclick="logout()">로그아웃</a>
+    </nav>
+
+    <main>
+      <h2>공지사항</h2>
+      <div class="notice">
+        <ul>
+          <li>[학사] 2025학년도 1학기 등록금 납부 안내</li>
+          <li>[일반] 인하대학교 정보보안교육 수강 안내</li>
+          <li>[취업] 상반기 삼성그룹 채용설명회 안내</li>
+          <li>[도서관] 4월 전자정보 박람회 개최</li>
+        </ul>
+      </div>
+
+      <div class="mascot-box">
+        <div class="mascot">
+          <img src="data:image/png;base64,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" alt="인덕이" />
+          <p>인덕이</p>
+        </div>
+        <div class="mascot">
+          <img src="https://via.placeholder.com/100?text=익룡이" alt="익룡이" />
+          <p>익룡이</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © 2025 Inha University. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      document.getElementById("login-page").style.display = "none";
+      document.getElementById("portal-page").style.display = "block";
+    }
+
+    function logout() {
+      document.getElementById("portal-page").style.display = "none";
+      document.getElementById("login-page").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>

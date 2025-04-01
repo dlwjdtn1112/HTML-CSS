@@ -1,0 +1,53 @@
+
+html,body{
+    justify-content: center;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+header {
+    width: 310px;
+    height:50px;
+    background-color: rgb(255, 0, 174);
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+main{
+    display: flex;
+}
+
+nav {
+    width:100px;
+    height : 200px;
+    background-color: red;
+    border-radius: 10px;
+    margin-right: 10px;
+
+
+}
+
+article {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 10px;
+    
+
+}
+
+footer {
+    width: 310px;
+    height: 50px;
+    background-color: deeppink;
+    border-radius: 10px;
+    margin-top : 10px;
+
+}

@@ -1,0 +1,30 @@
+
+html,body{
+    height : 100px;
+}
+
+
+body {
+    display: flex;
+    /*주축 정렬*/
+    /*justify-content: space-around;*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+div{
+    width:200px;
+    height:200px;
+    background-color: skyblue;
+
+}
+
+#second {
+    background-color: white;
+}
+
+
+
+
+

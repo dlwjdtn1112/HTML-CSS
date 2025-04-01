@@ -1,0 +1,20 @@
+table{
+    border :1px solid black;
+    border-collapse: collapse;
+    caption-side: bottom; 
+}
+
+caption{
+    text-align: right;
+}
+
+
+td,th{
+    border: 1px solid black;
+    padding: 12px;
+}
+td{text-align: center;}
+
+.coloring{
+    background:beige;
+}

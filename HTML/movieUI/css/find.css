@@ -1,0 +1,121 @@
+@import "./global.css";
+
+
+/* - 검색바 간격 조정 
+
+- 검색바 길이 조정  width = 100%
+
+- 검색바 
+  검색바 위 간격 조정  50px
+  input 의 끝 모서리를 동글하게 조정
+  width : 100%
+  padding 10px 
+  글자의 크기 화이트 지정 
+
+  
+  검색바에 포커스 지정  */
+
+  .find-search-bar-form {
+       padding: 0 25px;
+  }
+
+  .find-search-bar-form div { width: 100%;}
+
+  .find-search-bar {
+      margin-top: 20px;
+      background-color: var(--darkpurple);
+      border-radius: 25px;
+      width: 100%;
+      padding: 10px;
+      color: white;
+      transition: background-color 0.2s ease-in-out;
+  }
+
+  .find-search-bar:focus {
+     background-color: #594374;
+  }
+
+  .find-search-bar-form span {
+      position: absolute;
+      font: 1rem;
+      bottom: 0.3rem;
+      right: 40px;
+  }
+
+  .best-movie__img-container {
+    padding: 0 20px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+   /* 이미지 사이즈 조정 */
+  .best-movie__img {   
+    width: 22rem;
+    height: 12rem;
+    border-radius: 25px;
+  }
+
+  .best-movie__img-container span {
+    /* 부모를 기준으로 해서 움직인다. 부모가 relative, fixed  */
+    /* 해상도의 변화에 따라 재생버튼은 이미지를 기준으로 움직여야 한다.  */
+    position: absolute;      
+    background-color: var(--purple);
+    border-radius: 50%;
+    /* calc()속성함수 : 화면 크기가 바뀔때 마다 일정한 위치를 유지  2/3 만큼 위치시켜라 */
+    left: calc(50% + 5rem);
+    font-size: 5rem;
+    bottom: 3.2rem;
+  }
+  .best-movie__title {
+    padding-left: 25px;
+  }
+  .best-movie__promotion-title {
+    font-size: 14px;
+  }
+  .best-movie__movie-name {
+    color: var(--purple);
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  /* 전체를 감싸는 상자의 간격 조정 */
+  .movie-recommendation {
+             margin: 25px 0;
+             padding: 0 25px;
+  }
+  .movie-recommendation__imges {
+    margin-top: 20px;
+    /* ul 스타일을 제거 */
+    list-style: none;    
+    display: flex;
+    overflow: scroll;
+  }
+
+  .movie-recommendation__imges li {
+     margin-left: 5px;
+  }
+
+  .movie-recommendation__imges img {
+      width: 150px;
+      border-radius: 20px;
+  }
+
+  .profile_center{
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;     /* 수평 가운데 정렬 */
+    justify-content: center; /* 수직 가운데 정렬 (필요시) */
+    height: 100%;            /* 부모 높이에 따라 조절 */
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
